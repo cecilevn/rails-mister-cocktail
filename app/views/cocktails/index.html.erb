@@ -5,18 +5,24 @@
 <div class="list-group">
   <ul>
     <%@cocktails.each do |cocktail| %>
-      <li class="list-group-items"><%=  cocktail.name %>
         <%= link_to cocktail_path(cocktail) do %>
           <i class="fa fa-glass"></i>
         <% end %>
-        <%= cl_image_tag("n7dq4b246blm0omcbypw",
-      width: 400, height: 300, crop: :fill) %>
+
+        <div class="card" style="background-image: linear-gradient(rgba(0,0,0,0.3), rgba(0,0,0,0.2)), url(<%="#{cocktail.photo}"%>);">
+          <div class="card-description">
+            <h2><%=  cocktail.name %></h2>
+          </div>
+          <a class="card-link" href="#" ></a>
+        </div>
+
       </li>
     <% end %>
   </ul>
 </div>
 
 
+<div></div>
 <div class="text-center">
   <%= link_to "Créer un nouveau cocktail", new_cocktail_path,
       class: "btn btn-success" %>

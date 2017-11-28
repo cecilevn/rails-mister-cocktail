@@ -9,6 +9,15 @@
   </ul>
 <% end %>
 </p>
+  <%= image_tag @cocktail.photo, {class: "img-circle"} %>
+
+<%# simple_form_for(@cocktail) do |f| %>
+  <%# f.input :name %>
+  <%# f.input :photo %>
+  <%# f.input :photo_cache, as: :hidden %>
+
+  <%# f.submit %>
+<%# end %>
 
 <div class="text-center">
   <hr>
